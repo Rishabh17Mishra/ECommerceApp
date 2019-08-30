@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F14848"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/login"
+        android:id="@+id/imgLogin"
+        tools:ignore="ContentDescription"/>
+
+    <EditText
+        android:id="@+id/activity_main_edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="4dp"
+        android:drawableEnd="@drawable/email"
+        android:ems="10"
+        android:hint="@string/enterEmailAddress"
+        android:fontFamily="@font/amita"
+        android:background="#2196F3"
+        android:inputType="textEmailAddress"
+        android:textColor="#060409"
+        android:layout_below="@+id/imgLogin"
+        android:importantForAutofill="no" tools:targetApi="o"/>
+
+    <EditText
+        android:id="@+id/activity_main_edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_main_edtEmail"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="8dp"
+        android:drawableEnd="@drawable/password"
+        android:ems="10"
+        android:fontFamily="@font/amita"
+        android:background="#2196F3"
+        android:hint="@string/enterPassword"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textColor="#060409"
+        tools:targetApi="o" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LoginSignUp"
+        android:layout_below="@id/activity_main_edtPassword"
+        android:padding="6dp"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/activity_main_btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:background="#2196F3"
+            android:fontFamily="@font/amita"
+            android:padding="4dp"
+            android:text="@string/login"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" tools:targetApi="o" />
+
+        <Button
+            android:id="@+id/activity_main_btnSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:background="#2196F3"
+            android:fontFamily="@font/amita"
+            android:padding="4dp"
+            android:text="@string/signUp"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" tools:targetApi="o" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

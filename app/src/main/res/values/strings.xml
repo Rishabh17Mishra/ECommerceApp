@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ECommerceApp</string>
+    <string name="largeRadioButton">Large</string>
+    <string name="mediumRadioButton">Medium</string>
+    <string name="smallRadioButton">Small</string>
+    <string name="Size">Size</string>
+    <string name="login">Login</string>
+    <string name="signUp">Sign Up</string>
+    <string name="enterEmailAddress">Enter your email</string>
+    <string name="enterPassword">Enter your password</string>
+    <string name="confirmPassword">Re-enter your password</string>
+    <string name="enterUsername">enter yur username</string>
+    <string name="chooseBrand">Please choose a Brand</string>
+</resources>
