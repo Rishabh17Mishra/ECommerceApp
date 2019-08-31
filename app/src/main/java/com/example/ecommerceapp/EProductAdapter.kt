@@ -1,5 +1,6 @@
 package com.example.ecommerceapp
 
+import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -20,7 +21,7 @@ class EProductAdapter(private var context: Context, private var arrayList: Array
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         (holder as ProductViewHolder).initializeRowUIComponents(arrayList[position].id, arrayList[position].name,
-                arrayList[position].price, arrayList.get(position).picName)
+                arrayList[position].price, arrayList[position].picName)
     }
 
     inner class ProductViewHolder(pView: View) : RecyclerView.ViewHolder(pView){
@@ -32,6 +33,13 @@ class EProductAdapter(private var context: Context, private var arrayList: Array
             var picUrl = "http://192.168.0.104/ECommerceApp/osimages/"
             picUrl = picUrl.replace(" ", "%20")
             Picasso.get().load(picUrl + picName).into(itemView.imgProduct)
+
+            itemView.imgAdd.setOnClickListener {
+                Person.addToCartProductID = id
+                val amountFragment = AmountFragment()
+                @Suppress("DEPRECATION") val fragmentManager = (itemView.context as Activity).fragmentManager
+                amountFragment.show(fragmentManager, "TAG")
+            }
         }
     }
 }
