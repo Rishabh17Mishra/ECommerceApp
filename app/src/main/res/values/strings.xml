@@ -11,4 +11,7 @@
     <string name="confirmPassword">Re-enter your password</string>
     <string name="enterUsername">enter yur username</string>
     <string name="chooseBrand">Please choose a Brand</string>
+    <string name="price">Price</string>
+    <string name="Name">Name</string>
+    <string name="ID">ID</string>
 </resources>
