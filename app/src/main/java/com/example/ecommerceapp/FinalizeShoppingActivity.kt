@@ -30,7 +30,7 @@ class FinalizeShoppingActivity : AppCompatActivity() {
             btnPaymentProcessing.text = "Pay $response via PayPal Now"
             ttPrice = response.toLong()
 
-        }, Response.ErrorListener { error ->  })
+        }, Response.ErrorListener {  Toast.makeText(this,"Error", Toast.LENGTH_SHORT).show()  })
         requestQ.add(stringRequest)
 
         var payPalConfig: PayPalConfiguration = PayPalConfiguration().environment(PayPalConfiguration.ENVIRONMENT_SANDBOX).clientId(MyPayPal.clientID)
@@ -40,7 +40,7 @@ class FinalizeShoppingActivity : AppCompatActivity() {
 
         btnPaymentProcessing.setOnClickListener {
             var ppProcessing = PayPalPayment(BigDecimal.valueOf(ttPrice),
-                    "INR", "ECommerceApp", PayPalPayment.PAYMENT_INTENT_SALE)
+                    "USD", "ECommerceApp", PayPalPayment.PAYMENT_INTENT_SALE)
             var paypalPaymentIntent = Intent(this@FinalizeShoppingActivity, PaymentActivity::class.java)
             paypalPaymentIntent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, payPalConfig)
             paypalPaymentIntent.putExtra(PaymentActivity.EXTRA_PAYMENT, ppProcessing)

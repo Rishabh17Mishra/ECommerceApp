@@ -2,6 +2,6 @@ package com.example.ecommerceapp
 
 class MyPayPal {
     companion object {
-        var clientID = "AcClBdTtbDnPlMZts13XxUTJviMgGIQso4gJQXplD18UnTd6sHvou4n1DT2Ls38U_tc4lD1AyoHJf0mW"
+        var clientID = "ATPUAB1fqOPUmti49ZahvWtr-S6EZu9IbLXkJq-gs_ZuS24w8pyfClqHPk7KOab-NGzIColBdKEkYpg8"
     }
 }
